@@ -11,18 +11,31 @@ A theme based on oh-my-posh, powerline10k, omp-atomic and omp-kail.
 
 * posh-git & oh-my-posh
 -> how to install posh-git & oh-my-posh
-open your powershell and copy these line below.
+open your powershell and copy these lines below.
 ```sh
 Install-Module posh-git
 Install-Module oh-my-posh
 ```
 # Installation
+clone the file and drop it into the correct folder:
 ```sh
 git clone https://github.com/qwqqaqqwq00/posh-maybe-10k.git
 cd ./posh-maybe-10k
 mv ./my-atomic.omp.json ${OMP_PATH}/themes/my-atomic.omp.json
 ```
+in powershell use `$Profile` to check your profile and open it then add these lines below.
+```sh
+# set your theme.
+Set-PoshPrompt -Theme my-atomic
+Set-Alias p pnpm
+Set-Alias px pnpx
+Set-Alias ms multipass
 
+# enable transient prompt
+Set-PSReadlineOption -ExtraPromptLineCount 1
+Enable-PoshTransientPrompt
+```
+then save your profile and close it, finally, open your powershell to check.
 # Acknowledgments
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 * [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh3)
