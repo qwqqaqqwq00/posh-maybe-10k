@@ -37,12 +37,12 @@ clone the file and drop it into the correct folder:
 ```sh
 git clone https://github.com/qwqqaqqwq00/posh-maybe-10k.git
 cd ./posh-maybe-10k
-mv ./my-atomic.omp.json ${OMP_PATH}/themes/my-atomic.omp.json
+mv ./maybe10k.omp.json ${OMP_PATH}/themes/maybe10k.omp.json
 ```
 in powershell use `$Profile` to check your profile and open it then add these lines below.
 ```sh
 # set your theme.
-Set-PoshPrompt -Theme my-atomic
+Set-PoshPrompt -Theme maybe10k
 Set-Alias p pnpm
 Set-Alias px pnpx
 Set-Alias ms multipass
